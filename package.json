@@ -1,0 +1,25 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "Pranav's personal website",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jainpranav1/personal_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jainpranav1/personal_website/issues"
+  },
+  "homepage": "https://github.com/jainpranav1/personal_website#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
