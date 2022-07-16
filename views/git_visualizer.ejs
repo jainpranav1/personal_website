@@ -6,7 +6,13 @@
     <script src="//unpkg.com/element-resize-detector/dist/element-resize-detector.min.js"></script>
   </head>
   <body>
-    <div id="graph"></div>
+    <div class="container mt-3">
+      <ul>
+        <li>Circle → Commit | Square → Reference</li>
+        <li>Nodes can be grabbed and moved with your cursor.</li>
+      </ul>
+      <div id="graph"></div>
+    </div>
 
     <script>
       const Graph = ForceGraph()(document.getElementById("graph"))
@@ -21,7 +27,7 @@
         )
         .nodePointerAreaPaint(nodePaint)
         .nodeLabel("hover")
-        .backgroundColor("white")
+        .backgroundColor("LemonChiffon")
         .linkDirectionalArrowLength(6)
         .linkColor((link) => "black")
         .onNodeRightClick((node) => {
