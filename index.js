@@ -36,4 +36,8 @@ app.get("/volunteering", (req, res) => {
   res.render("volunteering");
 });
 
+app.get("/git_visualizer", (req, res) => {
+  res.render("git_visualizer");
+});
+
 app.listen(5000);
