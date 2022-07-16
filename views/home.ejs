@@ -3,9 +3,25 @@
   <head>
     <title>Cool Site</title>
     <%- include('bootstrap') %> <%- include('navbar') %>
+
+    <style>
+      .img-text-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .text-container {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+    <div class="container img-text-container">
+      <img src="/pranav_pic.jpg" height="500" />
+      <div class="text-container">
+        <h1>Welcome to my site!</h1>
+      </div>
+    </div>
   </body>
 </html>
