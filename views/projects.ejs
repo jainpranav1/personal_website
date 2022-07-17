@@ -3,8 +3,6 @@
   <head>
     <%- include('bootstrap') %> <%- include('navbar') %>
     <!-- accordion: https://getbootstrap.com/docs/5.0/components/accordion/-->
-
-    <style></style>
   </head>
   <body>
     <div class="container mt-3">
@@ -74,7 +72,7 @@
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              Nand2Tetris HDL Visualizer
             </button>
           </h2>
           <div
@@ -84,14 +82,42 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <p>
+                The
+                <a
+                  href="https://www.nand2tetris.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >nand2tetris course</a
+                >
+                is a great course in which students build a modern computer from
+                logic gates. One issue though is that there did not exist any
+                tool to generate helpful visualizations of the nand2tetris hdl
+                file, a type of file used to describe the structure of chips. As
+                an honors project for my CSCE 312 class, I worked remotely in a
+                team of 5 to develop a
+                <a
+                  href="https://github.com/tcheinen/nand2tetris"
+                  class="link-primary"
+                  target="_blank"
+                  >python-based visualizer</a
+                >
+                for nand2tetris hdl files.
+              </p>
+              <p>
+                I later updated the tool by developing it into a
+                <a
+                  href="https://marketplace.visualstudio.com/items?itemName=PranavJain.nand2tetris-hdl-visualizer&ssr=false#overview"
+                  class="link-primary"
+                  target="_blank"
+                  >vscode extension</a
+                >
+                . The extension now has over 100 downloads and has been used by
+                multiple CSCE 312 students.
+              </p>
+              <a class="btn btn-primary shadow-none" href="/chips" role="button"
+                >Open Chips Gallery</a
+              >
             </div>
           </div>
         </div>

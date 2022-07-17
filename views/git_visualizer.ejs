@@ -4,6 +4,12 @@
     <%- include('bootstrap') %> <%- include('navbar') %>
     <script src="//unpkg.com/force-graph"></script>
     <script src="//unpkg.com/element-resize-detector/dist/element-resize-detector.min.js"></script>
+
+    <style>
+      #graph {
+        max-height: 400px;
+      }
+    </style>
   </head>
   <body>
     <div class="container mt-3">
@@ -142,7 +148,10 @@
       // make graph responsive
       elementResizeDetectorMaker().listenTo(
         document.getElementById("graph"),
-        (el) => Graph.width(el.offsetWidth)
+        (el) => {
+          Graph.width(el.offsetWidth);
+          Graph.height(el.offsetHeight);
+        }
       );
     </script>
   </body>
