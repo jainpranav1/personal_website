@@ -44,8 +44,4 @@ app.get("/git_visualizer", (req, res) => {
   res.render("git_visualizer");
 });
 
-app.get("/chips", (req, res) => {
-  res.render("chips");
-});
-
 app.listen(5000);
