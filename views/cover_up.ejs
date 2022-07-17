@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('bootstrap') %> <%- include('navbar') %>
+    <%- include('bootstrap') %>
+    <!-- Quiz from: https://www.jetpunk.com/quizzes/multiple-choice-general-knowledge-1 -->
     <style>
       /* specifies styles of user interface buttons and stickies*/
 
@@ -129,7 +130,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
       type="text/javascript"
     ></script>
-
     <script>
       $(function () {
         // free coverup - free from page
@@ -156,10 +156,10 @@
         var height_store, width_store, free_store;
 
         // prepends buttons to beginning of body
-        $("body").prepend(coverup_button.fadeIn(400));
-        $("body").prepend(clear_button.fadeIn(400));
-        $("body").prepend(free_button.fadeIn(400));
-        $("body").prepend(duplicate_button.fadeIn(400));
+        $(".main-content").prepend(coverup_button.fadeIn(400));
+        $(".main-content").prepend(clear_button.fadeIn(400));
+        $(".main-content").prepend(free_button.fadeIn(400));
+        $(".main-content").prepend(duplicate_button.fadeIn(400));
 
         // function for toggling free button
         // free button determines whether coverup button creates free or fixed coverups
@@ -193,7 +193,7 @@
           }
 
           // appends coverup to body
-          $("body").append(newDiv.fadeIn(400));
+          $(".main-content").append(newDiv.fadeIn(400));
 
           // makes coverup draggable and resizable
           $(newDiv).draggable({ snap: true });
@@ -247,7 +247,7 @@
           }
 
           // appends coverup to body
-          $("body").append(copyDiv.fadeIn(400));
+          $(".main-content").append(copyDiv.fadeIn(400));
 
           // makes coverup draggable and resizable
           $(copyDiv).draggable({ snap: true });
@@ -290,5 +290,198 @@
       });
     </script>
   </head>
-  <body></body>
+  <body>
+    <%- include('navbar') %>
+    <div class="container mt-3 main-content">
+      <form class="mt-3">
+        <p>
+          1. What is the longest that an elephant has ever lived? (That we know
+          of)
+        </p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q1-1"
+            disabled
+          />
+          <label class="form-check-label" for="q1-1"> 17 years </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q1-2"
+            disabled
+          />
+          <label class="form-check-label" for="q1-2"> 49 years </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q1-3"
+            disabled
+          />
+          <label class="form-check-label" for="q1-3"> 86 years </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q1-4"
+            checked
+            disabled
+          />
+          <label class="form-check-label" for="q1-4"> 49 years </label>
+        </div>
+        Correct answer: 86 years
+      </form>
+      <form class="mt-3">
+        <p>2. How did Spider-Man get his powers?</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q2-1"
+            checked
+            disabled
+          />
+          <label class="form-check-label" for="q2-1">
+            Bitten by a radioactive spider
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q2-2"
+            disabled
+          />
+          <label class="form-check-label" for="q2-2"> Born with them </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q2-3"
+            disabled
+          />
+          <label class="form-check-label" for="q2-3">
+            Military experiment gone awry
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q2-4"
+            disabled
+          />
+          <label class="form-check-label" for="q2-4">
+            Woke up with them after a strange dream
+          </label>
+        </div>
+        Correct answer: Bitten by a radioactive spider
+      </form>
+      <form class="mt-3">
+        <p>3. What are the main colors on the flag of Spain?</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q3-1"
+            disabled
+          />
+          <label class="form-check-label" for="q3-1"> Black and yellow </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q3-2"
+            checked
+            disabled
+          />
+          <label class="form-check-label" for="q3-2"> Blue and white </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q3-3"
+            disabled
+          />
+          <label class="form-check-label" for="q3-3"> Green and white </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q3-4"
+            disabled
+          />
+          <label class="form-check-label" for="q3-4"> Red and yellow </label>
+        </div>
+        Correct answer: Red and yellow
+      </form>
+      <form class="mt-3">
+        <p>4. Which of these animals does NOT appear in the Chinese zodiac?</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q4-1"
+            disabled
+          />
+          <label class="form-check-label" for="q4-1"> Bear </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q4-2"
+            disabled
+          />
+          <label class="form-check-label" for="q4-2"> Dog </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q4-3"
+            checked
+            disabled
+          />
+          <label class="form-check-label" for="q3-3"> Dragon </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDisabled"
+            id="q4-4"
+            disabled
+          />
+          <label class="form-check-label" for="q3-4"> Rabbit </label>
+        </div>
+        Correct answer: Bear
+      </form>
+    </div>
+  </body>
 </html>
