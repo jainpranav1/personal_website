@@ -6,6 +6,13 @@
     <script src="//unpkg.com/element-resize-detector/dist/element-resize-detector.min.js"></script>
 
     <style>
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       #graph {
         max-height: 400px;
       }
@@ -13,10 +20,12 @@
   </head>
   <body>
     <div class="container mt-3">
-      <ul>
-        <li>Circle → Commit | Square → Reference</li>
-        <li>Nodes can be grabbed and moved with your cursor.</li>
-      </ul>
+      <div class="text-container">
+        <ul>
+          <li>Circle → Commit | Square → Reference</li>
+          <li>Nodes can be grabbed and moved with your cursor.</li>
+        </ul>
+      </div>
       <div id="graph"></div>
     </div>
 
