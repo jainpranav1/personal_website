@@ -48,4 +48,8 @@ app.get("/blockify", (req, res) => {
   res.render("blockify");
 });
 
+app.get("/cover_up", (req, res) => {
+  res.render("cover_up");
+});
+
 app.listen(5000);

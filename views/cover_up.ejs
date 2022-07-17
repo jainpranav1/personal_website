@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('bootstrap') %> <%- include('navbar') %>
+    <style>
+      /* specifies styles of user interface buttons and stickies*/
+
+      .coverup_button {
+        height: 50px !important;
+        width: 100px !important;
+        background-color: #4caf50 !important;
+        color: rgb(255, 255, 255) !important;
+        font-family: Trebuchet MS !important;
+        font-size: 16px !important;
+        outline: none !important;
+        border: none !important;
+        position: fixed !important;
+        top: 0px !important;
+        left: 15px !important;
+        z-index: 1000000 !important;
+        line-height: normal !important;
+        border-radius: 0px !important;
+      }
+
+      .coverup_button:hover {
+        background-color: #3e8e41 !important;
+        transition-duration: 0.4s !important;
+      }
+
+      .clear_button {
+        height: 50px !important;
+        width: 100px !important;
+        background-color: #4caf50 !important;
+        color: rgb(255, 255, 255) !important;
+        font-family: Trebuchet MS !important;
+        font-size: 16px !important;
+        outline: none !important;
+        border: none !important;
+        position: fixed !important;
+        top: 0px !important;
+        left: 130px !important;
+        z-index: 1000000 !important;
+        line-height: normal !important;
+        border-radius: 0px !important;
+      }
+
+      .clear_button:hover {
+        background-color: #3e8e41 !important;
+        transition-duration: 0.4s !important;
+      }
+
+      .free_button {
+        height: 50px !important;
+        width: 100px !important;
+        background-color: #4caf50 !important;
+        color: rgb(255, 255, 255);
+        font-family: Trebuchet MS !important;
+        font-size: 16px !important;
+        outline: 5px solid #445e93 !important;
+        outline-offset: -5px !important;
+        border: none !important;
+        position: fixed !important;
+        top: 0px !important;
+        left: 245px !important;
+        z-index: 1000000 !important;
+        line-height: normal !important;
+        border-radius: 0px !important;
+        white-space: pre-line !important;
+        text-align: center !important;
+      }
+
+      .free_button:hover {
+        background-color: #3e8e41 !important;
+        transition-duration: 0.4s !important;
+      }
+
+      .free_button_toggle {
+        outline: 5px solid #ff414d !important;
+        outline-offset: -5px !important;
+      }
+
+      .duplicate_button {
+        height: 50px !important;
+        width: 100px !important;
+        background-color: #4caf50 !important;
+        color: rgb(255, 255, 255) !important;
+        font-family: Trebuchet MS !important;
+        font-size: 16px !important;
+        outline: none !important;
+        border: none !important;
+        position: fixed !important;
+        top: 0px !important;
+        left: 358px !important;
+        z-index: 1000000 !important;
+        line-height: normal !important;
+        border-radius: 0px !important;
+      }
+
+      .duplicate_button:hover {
+        background-color: #3e8e41 !important;
+        transition-duration: 0.4s !important;
+      }
+
+      .coverup {
+        height: 100px;
+        width: 100px;
+        background-color: #7eb2dd;
+        outline: 10px solid #445e93;
+        outline-offset: -10px;
+        z-index: 999999;
+        left: 15px;
+      }
+
+      .coverup:active {
+        filter: brightness(85%);
+      }
+
+      .ui-icon,
+      .ui-widget-content .ui-icon {
+        background-image: none;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      $(function () {
+        // free coverup - free from page
+        // fixed coverup - fixed to page
+
+        // variable for toggling free button
+        var free = false;
+
+        // variables store user inteface buttons
+        var coverup_button = $(
+          '<button class="coverup_button">Add new coverup</button>'
+        );
+        var clear_button = $(
+          '<button class="clear_button">Clear all coverups</button>'
+        );
+        var free_button = $(
+          '<button class="free_button">Fixed\n coverup</button>'
+        );
+        var duplicate_button = $(
+          '<button class="duplicate_button">Duplicate coverup</button>'
+        );
+
+        // variable for storing properties for duplicate button
+        var height_store, width_store, free_store;
+
+        // prepends buttons to beginning of body
+        $("body").prepend(coverup_button.fadeIn(400));
+        $("body").prepend(clear_button.fadeIn(400));
+        $("body").prepend(free_button.fadeIn(400));
+        $("body").prepend(duplicate_button.fadeIn(400));
+
+        // function for toggling free button
+        // free button determines whether coverup button creates free or fixed coverups
+        $(".free_button").click(function () {
+          if (free === false) {
+            free = true;
+            $(this).text("Free \n coverup");
+          } else {
+            free = false;
+            $(this).text("Fixed \n coverup");
+          }
+
+          $(this).toggleClass("free_button_toggle", 1000);
+        });
+
+        // function for activating coverup button
+        // coverup button creates coverups
+        $(".coverup_button").click(function () {
+          var x = $(".coverup_button").offset();
+          var newDiv = $('<div class="coverup"></div>');
+
+          // creates free or fixed coverup
+          if (free === true) {
+            $(newDiv).css("position", "fixed");
+            $(newDiv).css("top", 60);
+            $(newDiv).css("background-color", "#eb8f8f");
+            $(newDiv).css("outline-color", "#ff414d");
+          } else {
+            $(newDiv).css("position", "absolute");
+            $(newDiv).css("top", 60 + x.top);
+          }
+
+          // appends coverup to body
+          $("body").append(newDiv.fadeIn(400));
+
+          // makes coverup draggable and resizable
+          $(newDiv).draggable({ snap: true });
+          $(newDiv).resizable({ handles: "all" });
+
+          // makes coverup deletable when clicked when shift key pressed
+          $(newDiv).click(function (evt) {
+            if (evt.shiftKey) {
+              $(this).fadeOut(400, function () {
+                $(this).remove();
+              });
+            }
+          });
+
+          // saves coverup properties to duplicate button when double clicked
+          $(newDiv).dblclick(function () {
+            height_store = $(this).height();
+            width_store = $(this).width();
+            if ($(this).css("position") === "absolute") {
+              free_store = false;
+            } else {
+              free_store = true;
+            }
+
+            $(".duplicate_button").mouseover(function () {
+              $(this).stop();
+            });
+
+            $(".duplicate_button").effect("pulsate", { times: 1 }, 800);
+          });
+        });
+
+        // function for activating duplicate button
+        // duplicate button creates duplicate coverups
+        $(".duplicate_button").click(function () {
+          var x = $(".coverup_button").offset();
+          var copyDiv = $('<div class="coverup"></div>');
+
+          $(copyDiv).css("height", height_store);
+          $(copyDiv).css("width", width_store);
+
+          // creates free or fixed coverup
+          if (free_store === true) {
+            $(copyDiv).css("position", "fixed");
+            $(copyDiv).css("top", 60);
+            $(copyDiv).css("background-color", "#eb8f8f");
+            $(copyDiv).css("outline-color", "#ff414d");
+          } else {
+            $(copyDiv).css("position", "absolute");
+            $(copyDiv).css("top", 60 + x.top);
+          }
+
+          // appends coverup to body
+          $("body").append(copyDiv.fadeIn(400));
+
+          // makes coverup draggable and resizable
+          $(copyDiv).draggable({ snap: true });
+          $(copyDiv).resizable({ handles: "all" });
+
+          // makes coverup deletable when clicked when shift key pressed
+          $(copyDiv).click(function (evt) {
+            if (evt.shiftKey) {
+              $(this).fadeOut(400, function () {
+                $(this).remove();
+              });
+            }
+          });
+
+          // saves coverup properties to duplicate button when double clicked
+          $(copyDiv).dblclick(function () {
+            height_store = $(this).height();
+            width_store = $(this).width();
+            if ($(this).css("position") === "absolute") {
+              free_store = false;
+            } else {
+              free_store = true;
+            }
+
+            $(".duplicate_button").mouseover(function () {
+              $(this).stop();
+            });
+
+            $(".duplicate_button").effect("pulsate", { times: 1 }, 800);
+          });
+        });
+
+        // function for acivating clear button
+        // clear button deletes all coverups
+        $(".clear_button").click(function () {
+          $(".coverup").fadeOut(400, function () {
+            $(".coverup").remove();
+          });
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
