@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('bootstrap') %> <%- include('navbar') %>
+    <%- include('bootstrap') %>
     <!-- accordion: https://getbootstrap.com/docs/5.0/components/accordion/-->
     <style>
       .iframe-container {
@@ -17,6 +17,7 @@
     </style>
   </head>
   <body>
+    <%- include('navbar') %>
     <div class="container mt-3">
       <h1>Projects</h1>
       <div class="accordion mt-3" id="accordionExample">
@@ -293,7 +294,7 @@
                   class="link-primary"
                   target="_blank"
                   >CoverUp</a
-                >. The tool places rectangles on a user’s screen, which can be
+                >. The tool places rectangles on a user's screen, which can be
                 dragged, resized, deleted, and copied in order to cover answers.
                 I published this tool on the Chrome Web Store as a google
                 extension.
@@ -310,6 +311,54 @@
                   width="560"
                   height="315"
                   src="https://www.youtube.com/embed/S2lhI5uvPwc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              eCampus CoverUp
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p>
+                While using past eCampus quizzes as study material for upcoming
+                exams, I wished that there was a way to quickly convert the quiz
+                into a practice exam. To solve this problem, I developed
+                <a
+                  href="https://chrome.google.com/webstore/detail/ecampuscoverup/nhighoefkblbildildaonmhkapledjpj"
+                  class="link-primary"
+                  target="_blank"
+                  >eCampus CoverUp</a
+                >. The tool automatically removes the answers from multiple
+                choice questions on eCampus. I published this tool on the Chrome
+                Web Store as a google extension.
+              </p>
+              <div class="iframe-container">
+                <iframe
+                  class="responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/S0DKMg2AqfM"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
