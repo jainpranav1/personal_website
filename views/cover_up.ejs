@@ -255,12 +255,14 @@
           // creates free or fixed coverup
           if (free_store === true) {
             $(copyDiv).css("position", "fixed");
-            $(copyDiv).css("top", 60);
+            $(copyDiv).css("top", 60 + x.top);
+            $(copyDiv).css("left", x.left);
             $(copyDiv).css("background-color", "#eb8f8f");
             $(copyDiv).css("outline-color", "#ff414d");
           } else {
             $(copyDiv).css("position", "absolute");
             $(copyDiv).css("top", 60 + x.top);
+            $(copyDiv).css("left", x.left);
           }
 
           // appends coverup to body
@@ -311,14 +313,16 @@
     <%- include('navbar') %>
     <div class="container mt-3 main-container">
       <div class="coverup-controls"></div>
-      <div class="text-container mt-3">
-        <p>
-          To use this quiz for studying, use CoverUp to generate "cover-ups" to
-          cover up the answers. Cover-ups are draggable and resizable. Use
-          shift-click to delete cover-ups.
-        </p>
-      </div>
       <div>
+        <div class="text-container mt-3">
+          <ul>
+            <li>
+              Use CoverUp to generate "cover-ups" to cover up the answers.
+            </li>
+            <li>Cover-ups are draggable and resizable.</li>
+            <li>Use shift-click to delete cover-ups.</li>
+          </ul>
+        </div>
         <form>
           <p>
             <b
@@ -490,6 +494,7 @@
               type="radio"
               name="flexRadioDisabled"
               id="q4-2"
+              checked
               disabled
             />
             <label class="form-check-label" for="q4-2"> Dog </label>
@@ -500,7 +505,6 @@
               type="radio"
               name="flexRadioDisabled"
               id="q4-3"
-              checked
               disabled
             />
             <label class="form-check-label" for="q3-3"> Dragon </label>
