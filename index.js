@@ -44,4 +44,8 @@ app.get("/git_visualizer", (req, res) => {
   res.render("git_visualizer");
 });
 
+app.get("/blockify", (req, res) => {
+  res.render("blockify");
+});
+
 app.listen(5000);
