@@ -14,6 +14,22 @@
       .text-container {
         max-width: 600px;
       }
+
+      .coverup-controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .control-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
     </style>
 
     <style>
@@ -169,10 +185,10 @@
         var height_store, width_store, free_store;
 
         // prepends buttons to beginning of body
-        $(".coverup-controls").prepend(duplicate_button.fadeIn(400));
-        $(".coverup-controls").prepend(free_button.fadeIn(400));
-        $(".coverup-controls").prepend(clear_button.fadeIn(400));
-        $(".coverup-controls").prepend(coverup_button.fadeIn(400));
+        $("#first-controls").append(coverup_button.fadeIn(400));
+        $("#first-controls").append(clear_button.fadeIn(400));
+        $("#second-controls").append(free_button.fadeIn(400));
+        $("#second-controls").append(duplicate_button.fadeIn(400));
 
         // function for toggling free button
         // free button determines whether coverup button creates free or fixed coverups
@@ -312,7 +328,10 @@
   <body>
     <%- include('navbar') %>
     <div class="container mt-3 mb-3 main-container">
-      <div class="coverup-controls"></div>
+      <div class="coverup-controls">
+        <div id="first-controls" class="control-block"></div>
+        <div id="second-controls" class="control-block"></div>
+      </div>
       <div>
         <div class="text-container mt-3">
           <ul>
