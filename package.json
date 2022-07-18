@@ -4,6 +4,7 @@
   "description": "Pranav's personal website",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "devStart": "nodemon index.js"
   },
   "repository": {
