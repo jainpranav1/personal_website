@@ -52,4 +52,5 @@ app.get("/cover_up", (req, res) => {
   res.render("cover_up");
 });
 
-app.listen(5000);
+const port = process.env.PORT || 5000;
+app.listen(port);
