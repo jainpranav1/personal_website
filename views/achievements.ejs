@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('bootstrap') %>
+        <style>
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            .content {
+                flex-grow: 1;
+            }
+        </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="container content mt-3 mb-3">
+            <h1>Achievements</h1>
+            <div class="accordion mt-3" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Dean's Honor Award
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>Issued by The College of Engineering at Texas A&M University : 8/19 - 8/22</b></p>
+                            <p>
+                                I received this award for achieving a 4.0 GPA.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Raymond Ideas Challenge
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>Issued by McFerrin Center For Entrepreneurship : 9/19</b></p>
+                            <p>
+                                I, along with my team of 4 other students, developed a video detailing our plan for
+                                constructing an adventure playground (named Build-A-Ground) in Bryan, Texas. My team
+                                placed among the top 40 finalists of the competition and were invited to present to two
+                                groups of judges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            A&M Club Leadership Award
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>Issued by The Association of Former Students of Texas A&M : 8/19 - 5/20</b></p>
+                            <p>
+                                I received this scholarship for two semesters for my academic achievement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            President's Endowed Scholarship
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>Issued by Texas A&M Foundation : 8/19 - 5/23</b></p>
+                            <p>
+                                I recevied this scholarship for four years by Texas A&M
+                                Foundation for my intellectual achievement, service, and leadership. It is considered to
+                                be
+                                Texas A&M's most prestigious academic scholarship.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Ruby A. Nelson Endowed Scholarship
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>Issued by Texas A&M Foundation : 8/19 - 5/23</b></p>
+                            <p>
+                                I received this scholarship awarded for four years based on my academic achievement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('footer') %>
+</body>
+
+</html>
