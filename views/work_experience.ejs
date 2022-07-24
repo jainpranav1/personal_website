@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('bootstrap') %>
+        <style>
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            .content {
+                flex-grow: 1;
+            }
+
+            .iframe-container {
+                max-width: 560px;
+                aspect-ratio: 16 / 9;
+            }
+
+            /* Then style the iframe to fit in the container div with full height and width */
+            .responsive-iframe {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="container content mt-3 mb-3">
+            <h1>Work Experience</h1>
+            <div class="accordion mt-3" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Capital One - TIP Intern
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>6/22 - 8/22</b></p>
+                            <p>
+                                I am currently working as a software engineering intern at Capital One. I am working on
+                                frontend development using Lit, Node.js, and TypeScript.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Takeda - Computer Science Intern
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>6/21 - 8/21</b></p>
+
+                            <p>
+                                I worked remotely as a full-time, paid computer science intern for 40 hours per week for
+                                12 weeks.
+                            </p>
+
+                            <p>
+                                <b>myPKFiT Isitup project:</b>
+                                I developed a Node JS based tool that can check the login page status of the myPKFiT
+                                site for over 50 countries every 15
+                                minutes. Before this tool, the myPKFiT team would only know about login issues after
+                                their users had already experienced
+                                them. My program allowed the team to know about and fix issues before users experience
+                                them, providing a better site
+                                experience for users.
+                            </p>
+
+                            <p>
+                                <b>HCP Specification Documentation:</b>
+                                Along with a fellow intern, I developed a document containing the functionalities and
+                                formatting data of the myPKFiT web
+                                application for over 50 countries. To reduce human error in data collection, I developed
+                                a Node JS based tool that
+                                automatically extracted the formatting data for each country's web application and
+                                placed the data into an excel file.
+                                This document was presented to the myPKFiT quality team and now resides in the myPKFiT
+                                technical file.
+                            </p>
+
+                            <p>
+
+                                <b>myPKFiT Screenshot Automation Tool:</b>
+                                I developed a tool that can automatically extract screenshots from the myPKFiT site and
+                                add them to a word document.
+                                This tool was developed to remove the need for manually collecting and adding
+                                screenshots to user manuals, a process
+                                that took approximately 3 hours per country. While my tool was only a proof of concept,
+                                once fully extended by future
+                                developers, the screenshot collection process will take 10-20 minutes and be fully
+                                automated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('footer') %>
+</body>
+
+</html>
